@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
     typedef struct
     {
         int id;
@@ -12,7 +10,9 @@ int main()
         int muertos;
     } ePais;
 
-    ePais arg= {22,{"arg"},23,20,10};
+int main()
+{
+    ePais arg= {22,"arg",23,20,10};
     int recuperadosAcum;
     recuperadosAcum=actualizarRecuperados(arg,25);
     printf("%d",recuperadosAcum);
@@ -43,9 +43,10 @@ int ordenarCaracteres(char cadena[],int tamcadena)
     if(cadena!=NULL)
     {
         char aux;
+        int i;
         while(cadena[i]!="\0")
         {
-            for(int k=0;k<i-1,k++)
+            for(int k=0;k<i-1;k++)
             {
             for (int j=k+1; j>i; j++)
             {
@@ -68,10 +69,11 @@ int  invertirCadena(char cadena[])
     int todoOk=0;
     if(cadena!=NULL)
     {
+        int i;
         while(cadena[i]!="\0")
         {
             i++;
-            for (j=i-1; j>=0; j--)
+            for (int j=i-1; j>=0; j--)
             {
                 printf("%c", cadena[j]);
                 todoOk=1;
